@@ -1,7 +1,7 @@
 
 resource "aws_instance" "vm" {
   ami                    = data.aws_ami.amazon-linux.id
-  instance_type          = var.instance_type
+  instance_type          = "t3.nano"
   tags = {
     Name = " VM DESTROY ME - ${terraform.workspace}",
     Terraform = "true"
